@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> OnewayTemplate is a web application where designers can come in and download figma templates for efficency in their design😁😆
+> OnewayTemplate is a web application where designers/developers can come in and download  templates for efficency in their design😁😆
 
 
 ![ba1](https://user-images.githubusercontent.com/71664736/197820823-9d9811e1-7e38-43a3-8d2e-b9ba8d8ab8ef.png)

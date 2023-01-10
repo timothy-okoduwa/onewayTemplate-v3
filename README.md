@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1 align="center">Welcome to OnewayTemplate 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/timothy-okoduwa/paystackecommjson" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://twitter.com/TimothyOkoduwa" target="_blank">
+    <img alt="Twitter: TimothyOkoduwa" src="https://img.shields.io/twitter/follow/TimothyOkoduwa.svg?style=social" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> OnewayTemplate is a web application where designers can come in and download figma templates for efficency in their design😁😆
 
-## Available Scripts
 
-In the project directory, you can run:
+![ba1](https://user-images.githubusercontent.com/71664736/197820823-9d9811e1-7e38-43a3-8d2e-b9ba8d8ab8ef.png)
 
-### `npm start`
+### 🏠 [Homepage](/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ✨ [Demo](https://figtemplate.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install
 
-### `npm run build`
+```sh
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Run tests
 
-### `npm run eject`
+```sh
+npm run test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Author
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👤 **Timothy okoduwa**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Website: T8m0thy0k0duwa.netlify.app
+* Twitter: [@TimothyOkoduwa](https://twitter.com/TimothyOkoduwa)
+* Github: [@https:\/\/github.com\/timothy-okoduwa](https://github.com/https:\/\/github.com\/timothy-okoduwa)
+* LinkedIn: [@https:\/\/www.linkedin.com\/in\/timothy-okoduwa-3845ab215\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/timothy-okoduwa-3845ab215\/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![m5](https://user-images.githubusercontent.com/71664736/197821154-c6574640-475f-40a2-bfa5-38c21353f2c4.png)
+<br/>
+<br/>
+<h1 align="center">Lighthouse Results 👋</h1>
 
-## Learn More
+![lighthouse-result](https://user-images.githubusercontent.com/71664736/198332264-ba0aa21b-735d-47ec-a28c-14c4176296af.svg)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br/>
+<br/>
+## 🤝 Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](T8m0thy0k0duwa.netlify.app). 
 
-### Code Splitting
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Give a ⭐️ if this project helped you!
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+***
+_This README was written with ❤️ by T8m0thy0k0duwa.netlify.app_

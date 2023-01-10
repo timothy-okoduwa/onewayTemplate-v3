@@ -1,5 +1,5 @@
 .bks {
-  background-image: url("./cta.png");
+  background-color: #6340EF;
   /* height: 400px; */
   background-repeat: no-repeat;
   border-radius: 15px !important;
@@ -8,15 +8,23 @@
 .be {
   color: white;
   font-weight: 600;
-  font-size: 40px;
-  margin-top: 15px;
+  font-size: 30px;
+  font-family: "Space Grotesk";
+
+}
+.be2 {
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Space Grotesk";
+margin-top: -7px;
 }
 
 .borderr {
   width: 50% !important;
   height: 60px !important;
   background: #1d1d1d !important;
-  box-shadow: 4px 4px 30px 5px rgba(64, 113, 239, 0.34) !important;
+  /* box-shadow: 4px 4px 30px 5px rgba(64, 113, 239, 0.34) !important; */
   border-radius: 10px !important;
   margin-top: 15px !important;
   display: flex !important;
@@ -46,7 +54,7 @@
 @media screen and (max-width: 768px) {
   .borderr {
     background: #1d1d1d !important;
-    box-shadow: 4px 4px 30px 5px rgba(64, 113, 239, 0.34) !important;
+    /* box-shadow: 4px 4px 30px 5px rgba(64, 113, 239, 0.34) !important; */
     border-radius: 10px !important;
     height: 60px !important;
     width: 100% !important;

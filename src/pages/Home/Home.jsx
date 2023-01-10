@@ -3,7 +3,7 @@ import Newsletter from '../NewsLetter/Newsletter';
 import Paid from '../PaidTemplate/Paid';
 import './Home.css';
 // import Carousel from 'react-bootstrap/Carousel';
-import a from './images/image.png';
+import a from './images/Group.png';
 import useFetch from '../../components/Hooks/useFetch';
 import { RiSearchLine } from 'react-icons/ri';
 import Buttons from './Buttons';
@@ -24,9 +24,10 @@ const Home = () => {
           <div class="centered container">
             <div className="mt-5 ">
               <div className="firsts">
-                 Design Resources.
-               
-                <div className="introoo">Get the best UI & Website Template</div>
+                Design Resources.
+                <div className="introoo">
+                  Get the best UI & Website Template
+                </div>
               </div>
               <div className="searchbarholder">
                 <div className="sighh">

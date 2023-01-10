@@ -1,13 +1,13 @@
-import React from 'react'
-import Free from '../Free/Free'
-import Newsletter from '../../NewsLetter/Newsletter'
-import { RiSearchLine } from 'react-icons/ri'
-import './Home.css'
+import React from 'react';
+import Free from '../Free/Free';
+import Newsletter from '../../NewsLetter/Newsletter';
+import { RiSearchLine } from 'react-icons/ri';
+import './Home.css';
 // import Carousel from 'react-bootstrap/Carousel';
-import a from './images/image.png'
-import Buttons from '../../Home/Buttons'
+import a from './images/Group.png';
+import Buttons from '../../Home/Buttons';
 const FHome = () => {
-  const [search, setSearch] = React.useState('')
+  const [search, setSearch] = React.useState('');
   return (
     <>
       <div style={{ 'margin-top': '-16px', backgroundColor: 'black' }}>
@@ -21,7 +21,7 @@ const FHome = () => {
           <div class="centered container">
             <div className="mt-5 ">
               <div className="firsts">
-               Free Design Resources.
+                Free Design Resources.
                 <div className="introoo">
                   Get the best UI & Website Template
                 </div>
@@ -51,6 +51,6 @@ const FHome = () => {
       <Newsletter />
     </>
   );
-}
+};
 
-export default FHome
+export default FHome;

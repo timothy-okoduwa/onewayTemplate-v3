@@ -12,16 +12,43 @@
   margin-top: -10px;
   /* background-color: black !important; */
 }
-.woww {
-  padding-left: 40px;
+.nav{
+ display: flex;
+ justify-content: space-between;
+
+  width: 320px;
+}
+.pushs{
+text-align: center;
   cursor: pointer;
   color: white;
+    width: fit-content;
+      padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.wowww {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+ display: flex;
+ justify-content: center;
+  cursor: pointer;
+  color: white;
+    width: fit-content;
 }
 @media screen and (max-width: 991px) {
-  .woww {
-    padding-left: 5px;
-    padding-top: 10px !important;
+  .wowww {
+    margin-left: 5px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
   }
+  .pushs{
+text-align: center;
+  cursor: pointer;
+  color: white;
+    width: fit-content;
+    margin-top: 10px;
+    height: fit-content;
+}
 }
 
 .mainHeader {
@@ -41,4 +68,8 @@
 }
 .fixedTop + .main-blockd {
   padding-top: 102px;
+}
+.nav a.active {
+  border-bottom:5px solid #FFC121;
+  width: fit-content;
 }

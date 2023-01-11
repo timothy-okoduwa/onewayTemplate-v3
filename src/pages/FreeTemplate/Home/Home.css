@@ -108,7 +108,7 @@ font-family: "Space Grotesk" !important;
   color: white !important;
   outline: none !important;
   padding-left: 85px !important;
-  border: 1px solid rgb(55, 179, 232) !important;
+   border: 1px solid #6340EF !important;
    font-family: "Darker Grotesque" !important;
 }
 .ok::placeholder {
@@ -138,7 +138,7 @@ justify-content: center !important;
     color: white !important;
     outline: none !important;
     padding-left: 53px !important;
- border: 1px solid rgb(55, 179, 232) !important;
+  border: 1px solid #6340EF !important;
   }
 }
 .tpti{

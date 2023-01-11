@@ -8,7 +8,7 @@ import useFetch from '../../components/Hooks/useFetch';
 import { RiSearchLine } from 'react-icons/ri';
 import Buttons from './Buttons';
 const Home = () => {
-  const { data, setData } = useFetch('https://wayback.up.railway.app/paids');
+  const { data } = useFetch('https://wayback.up.railway.app/paids');
   const [search, setSearch] = React.useState('');
 
   return (
@@ -22,7 +22,7 @@ const Home = () => {
           />
 
           <div class="centered container">
-            <div className="mt-5 ">
+            <div className="">
               <div className="firsts">
                 Design Resources.
                 <div className="introoo">
@@ -33,7 +33,7 @@ const Home = () => {
                 <div className="sighh">
                   <RiSearchLine className="tpti" />
                   <input
-                    className="ok"
+                    className="okk"
                     placeholder=" web, figma, xd 😉"
                     onChange={(event) => {
                       setSearch(event.target.value);

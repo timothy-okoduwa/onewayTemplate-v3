@@ -25,10 +25,12 @@ text-align: center;
     width: fit-content;
       padding-left: 20px !important;
   padding-right: 20px !important;
+  padding-bottom: 8px;
 }
 .wowww {
   padding-left: 20px !important;
   padding-right: 20px !important;
+    padding-bottom: 8px;
  display: flex;
  justify-content: center;
   cursor: pointer;
@@ -37,9 +39,9 @@ text-align: center;
 }
 @media screen and (max-width: 991px) {
   .wowww {
-    margin-left: 5px !important;
+    /* margin-left: 5px !important; */
     margin-top: 10px !important;
-    margin-bottom: 10px !important;
+    /* margin-bottom: 10px !important; */
   }
   .pushs{
 text-align: center;
@@ -70,6 +72,6 @@ text-align: center;
   padding-top: 102px;
 }
 .nav a.active {
-  border-bottom:5px solid #FFC121;
+  border-bottom:3px solid #FFC121;
   width: fit-content;
 }

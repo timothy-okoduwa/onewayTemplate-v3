@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Free.css';
 // import Form from 'react-bootstrap/Form';
 import a from './ido.jpg';
-import { RiSearchLine } from 'react-icons/ri';
+
 import { Link } from 'react-router-dom';
 import useFetch from '../../../components/Hooks/useFetch';
 import Loading from '../../../components/Loading/Loading';

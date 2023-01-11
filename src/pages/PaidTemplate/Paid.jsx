@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Paid.css';
 
 // import Form from 'react-bootstrap/Form';
 import a from './ido.jpg';
-import { RiSearchLine } from 'react-icons/ri';
+// import { RiSearchLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import useFetch from '../../components/Hooks/useFetch';
 import Loading from '../../components/Loading/Loading';
@@ -11,9 +11,7 @@ import Error from '../../components/Error/Error';
 
 const Paid = ({ search, data }) => {
   // const [search, setSearch] = useState('')
-  const { loading, error, setData } = useFetch(
-    'https://wayback.up.railway.app/paids'
-  );
+  const { loading, error } = useFetch('https://wayback.up.railway.app/paids');
 
   if (loading) return <Loading />;
   if (error) return <Error />;

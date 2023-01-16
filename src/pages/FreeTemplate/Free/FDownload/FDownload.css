@@ -55,3 +55,12 @@
      font-size: 23px !important;
      font-weight: 500;
 }
+@media screen and (max-width:768px){
+  .otal{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+    font-family: "Darker Grotesque", sans-serif;
+      font-size: 19px !important;
+}
+}

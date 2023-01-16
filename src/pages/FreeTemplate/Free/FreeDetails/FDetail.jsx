@@ -9,6 +9,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 // import { usePaystackPayment } from 'react-paystack';
 import useFetch from '../../../../components/Hooks/useFetch';
 import Newsletter from '../../../NewsLetter/Newsletter';
+import Loading from '../../../../components/Loading/Loading';
+import Error from '../../../../components/Error/Error';
 const FDetail = () => {
   const { id } = useParams();
   const { loading, error, data } = useFetch(
@@ -16,8 +18,8 @@ const FDetail = () => {
   );
 
   const navigate = useNavigate();
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <Loading/> ;
+  if (error) return <Error/> ;
   const onSuccess = () => {
     navigate(`/fdownloadthankfree183636egndh03984*5^n/${data.id}`);
   };

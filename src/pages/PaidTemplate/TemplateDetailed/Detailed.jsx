@@ -10,6 +10,8 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 // import { Link } from 'react-router-dom';
 import NewsLetter from '../../NewsLetter/Newsletter';
+import Loading from '../../../components/Loading/Loading';
+import Error from '../../../components/Error/Error';
 const Detailed = () => {
   const [validated, setValidated] = useState(false);
 
@@ -32,27 +34,11 @@ const Detailed = () => {
   const navigate = useNavigate();
   if (loading)
     return (
-      <p
-        style={{
-          textAlign: 'center',
-          backgroundColor: 'black',
-          color: 'white',
-        }}
-      >
-        Loading...
-      </p>
+ <Loading/>
     );
   if (error)
     return (
-      <p
-        style={{
-          textAlign: 'center',
-          backgroundColor: 'black',
-          color: 'white',
-        }}
-      >
-        Error :(
-      </p>
+ <Error/>
     );
   const config = {
     reference: new Date().getTime().toString(),

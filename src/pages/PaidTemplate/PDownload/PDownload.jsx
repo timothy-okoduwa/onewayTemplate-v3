@@ -4,6 +4,8 @@ import './PDownload.css';
 import { useParams, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import useFetch from '../../../components/Hooks/useFetch';
+import Loading from '../../../components/Loading/Loading';
+import Error from '../../../components/Error/Error';
 const PDownload = () => {
   const { id } = useParams();
   const { loading, error, data } = useFetch(
@@ -13,27 +15,11 @@ const PDownload = () => {
   const navigate = useNavigate();
   if (loading)
     return (
-      <p
-        style={{
-          textAlign: 'center',
-          backgroundColor: 'black',
-          color: 'white',
-        }}
-      >
-        Loading...
-      </p>
+<Loading/>
     );
   if (error)
     return (
-      <p
-        style={{
-          textAlign: 'center',
-          backgroundColor: 'black',
-          color: 'white',
-        }}
-      >
-        Error :(
-      </p>
+<Error/>
     );
   const move = () => {
     navigate('/');

@@ -1,15 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './FDownload.css';
-
+import Badge from 'react-bootstrap/Badge';
 import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from '../../../../components/Hooks/useFetch';
-import { setDoc, doc, Timestamp } from 'firebase/firestore';
+
 import { db } from '../../../../firebase';
+import {
+  doc,
+  updateDoc,
+  increment,
+  setDoc,
+  collection,
+  getDocs,
+} from 'firebase/firestore';
 import Button from 'react-bootstrap/Button';
 import Loading from '../../../../components/Loading/Loading';
 import Error from '../../../../components/Error/Error';
 const FDownload = () => {
-  let [num, setNum] = React.useState(0);
+ const [users, setUsers] = useState([]);
+  const usersCollectionRef = collection(db, 'freeDownload');
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(usersCollectionRef);
+      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getUsers();
+  }, []);
+
+
+
+
+  // const initialCount = () => Number(window.localStorage.getItem('num'));
+  // let [num, setNum] = useState(initialCount);
+  // let incNum = () => {
+  //   setNum(num + 1);
+  // };
+  //   useEffect(() => {
+  //     window.localStorage.setItem('num', num);
+  //   }, [num]);
+const userClick = async()=>{
+const freeRef = doc(db, 'freeDownload', 'views');
+
+// Atomically increment the population of the city by 50.
+await updateDoc(freeRef, {
+  Downloads: increment(1),
+});
+}
 
   const { id } = useParams();
   const { loading, error, data } = useFetch(
@@ -17,23 +55,19 @@ const FDownload = () => {
   );
 
   const navigate = useNavigate();
-  if (loading) return <loading />;
+  if (loading) return <Loading />;
   if (error) return <Error />;
   const move = () => {
     navigate('/free');
   };
-  let incNum = () => {
-  setNum(num + 1);
-    }
- 
 
-  const userclick = async () => {
-    await setDoc(doc(db, 'freeDownloads', 'ment'), {
-      status: 'just downloaded',
-      LatestDownload: Timestamp.fromDate(new Date()),
-      numberOfDownloads: num,
-    });
-  };
+  // const userclick = async () => {
+  //   await setDoc(doc(db, 'freeDownloads', 'ment'), {
+  //     status: 'just downloaded',
+  //     LatestDownload: Timestamp.fromDate(new Date()),
+  //     numberOfDownloads: num,
+  //   });
+  // };
   return (
     <>
       {
@@ -70,9 +104,8 @@ const FDownload = () => {
                   type="submit"
                   className="mt-2"
                   onClick={() => {
-                    // move();
-                    userclick();
-                    incNum();
+                    move();
+                    userClick();
                   }}
                 >
                   Download
@@ -81,6 +114,13 @@ const FDownload = () => {
               {/* <div>{count}</div>
                 <button onClick={increase}>ok</button> */}
             </div>
+{users.map((user)=>{
+  return (
+    <div className="otal">
+      we have a total number of <b className="Tempp2 mx-2">{user.Downloads}</b> downloads
+    </div>
+  );
+})}
           </div>
         </div>
       }

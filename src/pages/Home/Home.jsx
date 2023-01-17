@@ -3,6 +3,7 @@ import Newsletter from '../NewsLetter/Newsletter';
 import Paid from '../PaidTemplate/Paid';
 import './Home.css';
 // import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-scroll';
 import a from './images/Group.png';
 import useFetch from '../../components/Hooks/useFetch';
 import { RiSearchLine } from 'react-icons/ri';
@@ -50,17 +51,26 @@ const Home = () => {
                 </div>
               </div>
               <div>
-                <Buttons
-                  filterItem={filterItem}
-                  setData={setData}
-                  menuItems={menuItems}
-                />
+                <Link
+                  to="Paid"
+                  spy={true}
+                  offset={-70}
+                  smooth={true}
+                  duration={220}
+                >
+                  <Buttons
+                    filterItem={filterItem}
+                    setData={setData}
+                    menuItems={menuItems}
+                  />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Paid search={search} data={data} />
+
+      <Paid search={search} data={data}  />
 
       <Newsletter />
     </>

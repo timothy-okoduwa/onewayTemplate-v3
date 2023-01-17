@@ -16,11 +16,11 @@ const Paid = ({ search, data }) => {
   if (loading) return <Loading />;
   if (error) return <Error />;
   return (
-    <div style={{ backgroundColor: 'black' }}>
-
+    <div style={{ backgroundColor: 'black' }} id="Paid">
       <div className=" container">
         <div className="row pb-4">
-          {data.filter((props) => {
+          {data
+            .filter((props) => {
               if (search === '') {
                 return props;
               } else if (

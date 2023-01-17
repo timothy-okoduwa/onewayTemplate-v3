@@ -3,6 +3,7 @@ import Free from '../Free/Free';
 import Newsletter from '../../NewsLetter/Newsletter';
 import { RiSearchLine } from 'react-icons/ri';
 import './Home.css';
+import { Link } from 'react-scroll';
 // import Carousel from 'react-bootstrap/Carousel';
 import useFetch from '../../../components/Hooks/useFetch';
 import a from './images/Group.png';
@@ -51,11 +52,19 @@ const FHome = () => {
                 </div>
               </div>
               <div>
-                <Buttons
-                  filterItem={filterItem}
-                  setData={setData}
-                  menuItems={menuItems}
-                />
+                <Link
+                  to="Free"
+                  spy={true}
+                  offset={-70}
+                  smooth={true}
+                  duration={220}
+                >
+                  <Buttons
+                    filterItem={filterItem}
+                    setData={setData}
+                    menuItems={menuItems}
+                  />
+                </Link>
               </div>
             </div>
           </div>

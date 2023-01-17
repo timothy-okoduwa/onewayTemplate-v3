@@ -17,7 +17,7 @@ const Free = ({ search,data }) => {
 
   // console.log(data);
   return (
-    <div className="mainsss">
+    <div className="mainsss" id="Free">
       <div className=" container">
         <div className="row pb-4">
           {data

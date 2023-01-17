@@ -4,10 +4,22 @@ import Newsletter from '../../NewsLetter/Newsletter';
 import { RiSearchLine } from 'react-icons/ri';
 import './Home.css';
 // import Carousel from 'react-bootstrap/Carousel';
+import useFetch from '../../../components/Hooks/useFetch';
 import a from './images/Group.png';
-import Buttons from '../../Home/Buttons';
+import Buttons from './FButtons';
+
 const FHome = () => {
+    const { data, setData } = useFetch('https://wayback.up.railway.app/frees');
   const [search, setSearch] = React.useState('');
+    const menuItems = [...new Set(data.map((Val) => Val.longname))];
+
+    const filterItem = (curcat) => {
+      const newItem = data.filter((newVal) => {
+        return newVal.longname === curcat;
+      });
+      setData(newItem);
+    };
+
   return (
     <>
       <div style={{ 'margin-top': '-16px', backgroundColor: 'black' }}>
@@ -39,14 +51,18 @@ const FHome = () => {
                 </div>
               </div>
               <div>
-                <Buttons />
+                <Buttons
+                  filterItem={filterItem}
+                  setData={setData}
+                  menuItems={menuItems}
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <Free search={search} />
+      <Free search={search} data={data} />
 
       <Newsletter />
     </>

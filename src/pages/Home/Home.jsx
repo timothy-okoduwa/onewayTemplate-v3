@@ -8,8 +8,16 @@ import useFetch from '../../components/Hooks/useFetch';
 import { RiSearchLine } from 'react-icons/ri';
 import Buttons from './Buttons';
 const Home = () => {
-  const { data } = useFetch('https://wayback.up.railway.app/paids');
+  const { data, setData } = useFetch('https://wayback.up.railway.app/paids');
   const [search, setSearch] = React.useState('');
+  const menuItems = [...new Set(data.map((Val) => Val.longname))];
+
+  const filterItem = (curcat) => {
+    const newItem = data.filter((newVal) => {
+      return newVal.longname === curcat;
+    });
+    setData(newItem);
+  };
 
   return (
     <>
@@ -42,7 +50,11 @@ const Home = () => {
                 </div>
               </div>
               <div>
-                <Buttons />
+                <Buttons
+                  filterItem={filterItem}
+                  setData={setData}
+                  menuItems={menuItems}
+                />
               </div>
             </div>
           </div>

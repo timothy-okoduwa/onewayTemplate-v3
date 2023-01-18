@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './Newsletter.css';
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,10 +11,10 @@ const Newsletter = () => {
 
     emailjs
       .sendForm(
-        'service_sfypikm',
-        'template_mwwn9om',
+        'service_rdogrwd',
+        'template_va3sl1u',
         form.current,
-        'opXca3zh-s4K59SO1'
+        'AqVpXANwTRAyd0jY5'
       )
       .then(
         (result) => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FDownload.css';
-import Badge from 'react-bootstrap/Badge';
+// import Badge from 'react-bootstrap/Badge';
 import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from '../../../../components/Hooks/useFetch';
 
@@ -9,7 +9,7 @@ import {
   doc,
   updateDoc,
   increment,
-  setDoc,
+  // setDoc,
   collection,
   getDocs,
 } from 'firebase/firestore';

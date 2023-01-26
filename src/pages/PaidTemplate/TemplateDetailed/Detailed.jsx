@@ -84,7 +84,7 @@ const Detailed = () => {
   return (
     <>
       {
-        <div className="steady">
+        <div className="steady " style={{ marginTop: '-16px' }}>
           <div class="container22">
             <img
               src={a}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Paid.css';
 
 // import Form from 'react-bootstrap/Form';
@@ -8,9 +8,17 @@ import { Link } from 'react-router-dom';
 import useFetch from '../../components/Hooks/useFetch';
 import Loading from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
+import Pagination from '../../Pagination';
 
 const Paid = ({ search, data }) => {
   // const [search, setSearch] = useState('')
+  const [currentPage, setCurrentPage] = useState(1);
+  const [recordsPerPage] = useState(6);
+
+  const indexOfLastRecord = currentPage * recordsPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+  const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);
+  const nPages = Math.ceil(data.length / recordsPerPage);
   const { loading, error } = useFetch('https://wayback.up.railway.app/paids');
 
   if (loading) return <Loading />;
@@ -19,7 +27,7 @@ const Paid = ({ search, data }) => {
     <div style={{ backgroundColor: 'black' }} id="Paid">
       <div className=" container">
         <div className="row pb-4">
-          {data
+          {currentRecords
             .filter((props) => {
               if (search === '') {
                 return props;
@@ -55,6 +63,11 @@ const Paid = ({ search, data }) => {
                 </Link>
               </div>
             ))}
+          <Pagination
+            nPages={nPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       </div>
     </div>

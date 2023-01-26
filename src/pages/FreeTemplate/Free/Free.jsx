@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Free.css';
 // import Form from 'react-bootstrap/Form';
 import a from './ido.jpg';
@@ -7,7 +7,20 @@ import { Link } from 'react-router-dom';
 import useFetch from '../../../components/Hooks/useFetch';
 import Loading from '../../../components/Loading/Loading';
 import Error from '../../../components/Error/Error';
+import Pagination from '../../../Pagination';
+
 const Free = ({ search,data }) => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [recordsPerPage] = useState(6);
+
+        const indexOfLastRecord = currentPage * recordsPerPage;
+        const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+        const currentRecords = data.slice(
+          indexOfFirstRecord,
+          indexOfLastRecord
+        );
+        const nPages = Math.ceil(data.length / recordsPerPage);
+
   const { loading, error } = useFetch(
     'https://wayback.up.railway.app/frees'
   );
@@ -20,7 +33,7 @@ const Free = ({ search,data }) => {
     <div className="mainsss" id="Free">
       <div className=" container">
         <div className="row pb-4">
-          {data
+          {currentRecords
             .filter((props) => {
               if (search === '') {
                 return props;
@@ -56,6 +69,11 @@ const Free = ({ search,data }) => {
                 </Link>
               </div>
             ))}
+          <Pagination
+            nPages={nPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Pagination.css';
 const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
   const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
 
@@ -11,58 +11,23 @@ const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
   };
   return (
     <nav>
-      <ul className="pagination justify-content-center mt-5">
-        <li className="page-item ">
-          <a
-            className="page-link "
-            onClick={prevPage}
-            style={{
-              cursor: 'pointer',
-              textDecoration: 'none',
-              color: 'white',
-              backgroundColor: 'black',
-            //   border: '0.8px solid #6340EF',
-            }}
-          >
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
+      <div class="pagination justify-content-center mt-5">
+        <a className="twite" onClick={prevPage}>
+          &laquo;
+        </a>
         {pageNumbers.map((pgNumber) => (
-          <li
-            key={pgNumber}
-            className={`page-item ${currentPage == pgNumber ? 'active' : ''} `}
-          >
-            <a
-              onClick={() => setCurrentPage(pgNumber)}
-              className="page-link"
-              style={{
-                cursor: 'pointer',
-                textDecoration: 'none',
-                color: 'white',
-                backgroundColor: 'black',
-                // border: '0.8px solid #6340EF',
-              }}
-            >
-              {pgNumber}
-            </a>
-          </li>
-        ))}
-        <li className="page-item">
           <a
-            className="page-link"
-            onClick={nextPage}
-            style={{
-              cursor: 'pointer',
-              textDecoration: 'none',
-              color: 'white',
-              backgroundColor: 'black',
-            //   border: '0.8px solid #6340EF',
-            }}
+            key={pgNumber}
+            onClick={() => setCurrentPage(pgNumber)}
+            className={` ${currentPage === pgNumber ? 'active' : 'null'} `}
           >
-            <span aria-hidden="true">&raquo;</span>
+            <div>{pgNumber}</div>
           </a>
-        </li>
-      </ul>
+        ))}
+        <a className="twite2" onClick={nextPage}>
+          &raquo;
+        </a>
+      </div>
     </nav>
   );
 };

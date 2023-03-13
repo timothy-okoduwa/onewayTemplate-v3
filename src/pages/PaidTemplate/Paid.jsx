@@ -19,7 +19,7 @@ const Paid = ({ search, data }) => {
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
   const currentRecords = data.slice(indexOfFirstRecord, indexOfLastRecord);
   const nPages = Math.ceil(data.length / recordsPerPage);
-  const { loading, error } = useFetch('https://wayback.up.railway.app/paids');
+  const { loading, error } = useFetch('http://localhost:1337/paids');
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -47,8 +47,7 @@ const Paid = ({ search, data }) => {
                     <div className="imageHolder55">
                       <img
                         src={
-                          `https://wayback.up.railway.app${props.sight.url}` ||
-                          a
+                          `http://localhost:1337${props.sight.url}` || a
                         }
                         alt=""
                         className="mama"

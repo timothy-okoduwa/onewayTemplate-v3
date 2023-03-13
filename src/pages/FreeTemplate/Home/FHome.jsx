@@ -10,7 +10,7 @@ import a from './images/Group.png';
 import Buttons from './FButtons';
 
 const FHome = () => {
-    const { data, setData } = useFetch('https://wayback.up.railway.app/frees');
+    const { data, setData } = useFetch('http://localhost:1337/frees');
   const [search, setSearch] = React.useState('');
     const menuItems = [...new Set(data.map((Val) => Val.longname))];
 

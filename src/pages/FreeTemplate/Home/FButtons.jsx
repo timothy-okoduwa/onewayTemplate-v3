@@ -2,7 +2,7 @@ import React from 'react'
 import './Home.css'
 import useFetch from '../../../components/Hooks/useFetch';
 const Buttons = ({ filterItem, setData, menuItems }) => {
-      const { data } = useFetch('https://wayback.up.railway.app/frees');
+      const { data } = useFetch('http://localhost:1337/frees');
   return (
     <div className="types ">
       <button className="psd text-light" onClick={() => setData(data)}>

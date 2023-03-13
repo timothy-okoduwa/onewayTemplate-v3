@@ -9,7 +9,7 @@ import useFetch from '../../components/Hooks/useFetch';
 import { RiSearchLine } from 'react-icons/ri';
 import Buttons from './Buttons';
 const Home = () => {
-  const { data, setData } = useFetch('https://wayback.up.railway.app/paids');
+  const { data, setData } = useFetch('http://localhost:1337/paids');
   const [search, setSearch] = React.useState('');
   const menuItems = [...new Set(data.map((Val) => Val.longname))];
 

@@ -21,9 +21,7 @@ const Free = ({ search,data }) => {
         );
         const nPages = Math.ceil(data.length / recordsPerPage);
 
-  const { loading, error } = useFetch(
-    'https://wayback.up.railway.app/frees'
-  );
+  const { loading, error } = useFetch('http://localhost:1337/frees');
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -53,7 +51,7 @@ const Free = ({ search,data }) => {
                     <div className="imageHolder55">
                       <img
                         src={
-                          `https://wayback.up.railway.app${props.fsight.url}` ||
+                          `http://localhost:1337${props.fsight.url}` ||
                           a
                         }
                         alt=""

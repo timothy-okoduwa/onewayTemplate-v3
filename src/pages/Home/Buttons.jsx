@@ -3,9 +3,7 @@ import './Home.css'
 // import { Link } from 'react-scroll';
 import useFetch from '../../components/Hooks/useFetch';
 const Buttons = ({ filterItem, setData, menuItems }) => {
-      const { data } = useFetch(
-        'https://wayback.up.railway.app/paids'
-      );
+      const { data } = useFetch('http://localhost:1337/paids');
   return (
     <div className="types ">
       

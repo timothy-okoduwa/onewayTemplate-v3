@@ -51,7 +51,7 @@ await updateDoc(freeRef, {
 
   const { id } = useParams();
   const { loading, error, data } = useFetch(
-    'https://wayback.up.railway.app/frees/' + id
+    'http://localhost:1337/frees/' + id
   );
 
   const navigate = useNavigate();
@@ -87,7 +87,7 @@ await updateDoc(freeRef, {
             <div className="cent">
               <div className="imgcc">
                 <img
-                  src={`https://wayback.up.railway.app${data.fsight.url}`}
+                  src={`http://localhost:1337${data.fsight.url}`}
                   alt=""
                   className="imgcc"
                 />
@@ -114,13 +114,14 @@ await updateDoc(freeRef, {
               {/* <div>{count}</div>
                 <button onClick={increase}>ok</button> */}
             </div>
-{users.map((user)=>{
-  return (
-    <div className="otal">
-      we have a total number of <b className="Tempp2 mx-2">{user.Downloads}</b> downloads
-    </div>
-  );
-})}
+            {users.map((user) => {
+              return (
+                <div className="otal">
+                  we have a total number of{' '}
+                  <b className="Tempp2 mx-2">{user.Downloads}</b> downloads
+                </div>
+              );
+            })}
           </div>
         </div>
       }

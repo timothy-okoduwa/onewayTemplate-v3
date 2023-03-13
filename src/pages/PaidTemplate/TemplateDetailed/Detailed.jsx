@@ -28,9 +28,7 @@ const Detailed = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const { id } = useParams();
-  const { loading, error, data } = useFetch(
-    'https://wayback.up.railway.app/paids/' + id
-  );
+  const { loading, error, data } = useFetch('http://localhost:1337/paids/' + id);
   const navigate = useNavigate();
   if (loading)
     return (
@@ -107,7 +105,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner1.url}`}
+                        src={`http://localhost:1337${data.banner1.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -116,7 +114,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner2.url}`}
+                        src={`http://localhost:1337${data.banner2.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -125,7 +123,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner3.url}`}
+                        src={`http://localhost:1337${data.banner3.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -134,7 +132,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner4.url}`}
+                        src={`http://localhost:1337${data.banner4.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -143,7 +141,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner5.url}`}
+                        src={`http://localhost:1337${data.banner5.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -152,7 +150,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner6.url}`}
+                        src={`http://localhost:1337${data.banner6.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -161,7 +159,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner7.url}`}
+                        src={`http://localhost:1337${data.banner7.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -170,7 +168,7 @@ const Detailed = () => {
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.banner8.url}`}
+                        src={`http://localhost:1337${data.banner8.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -181,7 +179,7 @@ const Detailed = () => {
                   <Card style={{ width: '18rem' }} className="vard mt-5">
                     <Card.Img
                       variant="top"
-                      src={`https://wayback.up.railway.app${data.sight.url}`}
+                      src={`http://localhost:1337${data.sight.url}`}
                       className="p-2"
                       style={{
                         borderRadius: '15px',
@@ -248,7 +246,7 @@ const Detailed = () => {
                 <div className=" lay">Compatability</div>
                 <div className="compact">
                   <img
-                    src={`https://wayback.up.railway.app${data.compact.url}`}
+                    src={`http://localhost:1337${data.compact.url}`}
                     alt=""
                     style={{ width: '100%' }}
                   />
